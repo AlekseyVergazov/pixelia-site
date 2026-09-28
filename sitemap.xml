@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Полные адреса обязательны. При переезде на свой домен заменить адрес (см. TODO.md). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alekseyvergazov.github.io/pixelia-site/</loc>
+  </url>
+  <url>
+    <loc>https://alekseyvergazov.github.io/pixelia-site/privacy/</loc>
+  </url>
+</urlset>

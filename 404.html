@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — Pixelia</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#161616">
+
+  <script>
+    // Хостинг показывает эту страницу по любому неверному адресу, в том числе вложенному
+    // (…/pixelia-site/a/b/). Чтобы относительные пути не ломались, задаём базовый адрес —
+    // корень сайта: на github.io это /pixelia-site/, на своём домене — /.
+    // Стиль подключаем уже после этого, а значок берётся из CSS — так браузер не ходит по неверным адресам.
+    (function () {
+      if (location.protocol !== "file:") {
+        var p = location.pathname;
+        var base = document.createElement("base");
+        base.href = p === "/pixelia-site" || p.indexOf("/pixelia-site/") === 0 ? "/pixelia-site/" : "/";
+        document.head.appendChild(base);
+      }
+      var css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = "css/style.css";
+      document.head.appendChild(css);
+    })();
+  </script>
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./" aria-label="Pixelia — на главную">
+        <span class="brand__icon" aria-hidden="true"></span>
+        Pixelia
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap not-found">
+    <div>
+      <p class="not-found__code" aria-hidden="true">404<span class="pixels"><i></i><i></i><i></i><i></i></span></p>
+      <h1>Страница не найдена</h1>
+      <p>Такой страницы нет. Возможно, ссылка устарела или в адресе опечатка.</p>
+      <a class="btn btn-primary" href="./">На главную</a>
+    </div>
+  </main>
+</body>
+</html>

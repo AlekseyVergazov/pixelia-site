@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alekseyvergazov.github.io/pixelia-site/sitemap.xml
