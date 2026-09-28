@@ -487,7 +487,8 @@ p + p {
   color: var(--lav-1);
   font-size: 1.0625rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 .slogan::after {
